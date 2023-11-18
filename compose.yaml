@@ -12,7 +12,7 @@ services:
     volumes:
       - database_data:/var/lib/postgresql/data:rw
 
-## Plateforme d'administration d'un base de données
+## Plateforme d'administration d'une base de données
   pgadmin:
     image: dpage/pgadmin4
     environment:
