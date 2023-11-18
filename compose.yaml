@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+## Base de données
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: symfonydb
+      ## En production, il faut changer le POSTGRES_USER et le POSTGRES_PASSWORD
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: userpass
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw
+
+## Plateforme d'administration d'un base de données
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      ## En production, il faut changer le PGADMIN_DEFAULT_EMAIL et le PGADMIN_DEFAULT_PASSWORD
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "81:80"
+
+volumes:
+  database_data:
