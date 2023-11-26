@@ -30,3 +30,9 @@ Choisir `n` ou `x`.
 ### Pourquoi ?
 
 Nous avons déjà notre propre configuration de Docker.
+
+## 4. Modifier le fichier `.env` pour la connexion à la base de données
+
+```yml
+DATABASE_URL=postgresql://user:userpass@postgres:5432/symfonydb?serverVersion=15&charset=utf8
+```
