@@ -6,13 +6,21 @@
 git clone https://github.com/Celtak/symfony-6
 ```
 
-## 2. Installer les dépendances
+## 2. Aller dans le dossier du projet
+
+```bash
+
+```bash
+cd symfony-6
+```
+
+## 3. Installer les dépendances
 
 ```bash
 composer install
 ```
 
-## 3. Ne pas inclure la configuration de Docker proposé par Symfony
+## 4. Ne pas inclure la configuration de Docker proposé par Symfony
 
 ```bash
 Do you want to include Docker configuration from recipes?
@@ -31,8 +39,14 @@ Choisir `n` ou `x`.
 
 Nous avons déjà notre propre configuration de Docker.
 
-## 4. Modifier le fichier `.env` pour la connexion à la base de données
+## 5. Modifier le fichier `.env` pour la connexion à la base de données
 
 ```yml
 DATABASE_URL=postgresql://user:userpass@127.0.0.1:5432/symfonydb?serverVersion=15&charset=utf8
+```
+
+## 6. Lancer le serveur local
+
+```bash
+symfony server:start
 ```
