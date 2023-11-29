@@ -9,8 +9,6 @@ git clone https://github.com/Celtak/symfony-6
 ## 2. Aller dans le dossier du projet
 
 ```bash
-
-```bash
 cd symfony-6
 ```
 
